@@ -1,7 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Raleway", sans-serif;
 }
 
 .slider {
@@ -9,28 +11,69 @@
   width: 100%;
   background: url("../img/allec-gomes-on-feed-AuucNRZ_yJY-unsplash.jpg") no-repeat center center/cover;
   display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
 }
-.slider .arrow {
+.slider .form-container {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.slider .form-container * {
+  margin: 1rem;
+  border: 1px solid #b6b4b4;
+  border-radius: 50px;
+}
+.slider .form-container *:focus {
+  outline: none;
+}
+.slider .form-container input[type=text] {
+  width: 70%;
+  height: 50px;
+  text-align: center;
+  font-size: 1.1rem;
+}
+.slider .form-container input[type=text]:focus {
+  outline: none;
+}
+.slider .form-container button {
+  width: 20%;
+  height: 50px;
+  background-color: #fff;
+  font-size: 1.2rem;
+}
+.slider .form-container button:hover {
+  cursor: pointer;
+}
+.slider .image-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slider .image-container .arrow {
   font-size: 2rem;
   border-radius: 50%;
   color: #fff;
   border: 1px solid #fff;
   opacity: 0.7;
-  margin: 3rem 1rem 5.8rem 1rem;
+  margin: auto 1rem;
   padding: 10px;
   width: 50px;
   height: 50px;
 }
-.slider .arrow i {
+.slider .image-container .arrow i {
   vertical-align: super;
 }
-.slider .arrow:hover {
+.slider .image-container .arrow:hover {
   opacity: 1;
 }
-.slider .image {
+.slider .image-container .image {
   height: 150px;
   flex-basis: 200px;
   border-radius: 5px;
@@ -38,19 +81,19 @@
   opacity: 0.7;
   transition: transform 200ms linear;
 }
-.slider .image:hover {
+.slider .image-container .image:hover {
   cursor: pointer;
   transform: scale(1.05);
   opacity: 1;
   transition: all 200ms linear;
 }
-.slider .active {
+.slider .image-container .active {
   transform: scale(1.2);
   opacity: 1;
   border: 5px solid rgba(235, 222, 52, 0.5);
   transition: all 200ms ease-in;
 }
-.slider .active:hover {
+.slider .image-container .active:hover {
   transform: scale(1.2);
 }
 
